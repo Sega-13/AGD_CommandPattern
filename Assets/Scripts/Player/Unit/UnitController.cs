@@ -49,6 +49,7 @@ namespace Command.Player
             SetAliveState(UnitAliveState.ALIVE);
             SetUsedState(UnitUsedState.NOT_USED);
         }
+        public void ProcessUnitCommand(UnitCommand commandToProcess) => GameService.Instance.CommandInvoker.ProcessCommand(commandToProcess);
 
         public void StartUnitTurn()
         {

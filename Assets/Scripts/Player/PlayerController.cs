@@ -89,5 +89,9 @@ namespace Command.Player
             activeUnitIndex--;
             units[activeUnitIndex].StartUnitTurn();
         }
+        public void ProcessUnitCommand(UnitCommand commandToProcess)
+        {
+            GetUnitByID(commandToProcess.commandData.ActorUnitID).ProcessUnitCommand(commandToProcess);
+        }
     }
 }
